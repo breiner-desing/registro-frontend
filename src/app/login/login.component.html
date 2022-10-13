@@ -1,0 +1,27 @@
+        <div [formGroup]="formulario" class="">
+            <div class="flex align-items-center justify-content-center m-5">
+                <span class="p-float-label">
+                    <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('correo')}" type="text"
+                        formControlName="correo" pInputText>
+                    <label for="float-input">Correo</label>
+                </span>
+            </div>
+            <div class="flex align-items-center justify-content-center m-5">
+                <span class="p-float-label">
+                    <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('contrasenia')}" type="text"
+                        formControlName="contrasenia" pInputText>
+                    <label for="float-input">Contraseña</label>
+                </span>
+            </div>
+            <div class="flex align-items-center justify-content-center m-5">
+                <div class="m-5">
+                    <button pButton type="button" class="disable" (click)="logguer()"
+                        class="p-button-raised p-button-rounded">enviar</button>
+                </div>
+                <div class="m-5">
+                    <button pButton type="button" class="disable" (click)="redirec()"
+                        class="p-button-raised p-button-rounded">Registrar</button>
+                </div>
+            </div>
+
+        </div>

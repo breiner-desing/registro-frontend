@@ -1,0 +1,82 @@
+<div [formGroup]="formulario">
+
+    <h3 class="flex align-items-center justify-content-center">Registro</h3>
+
+    <div class="flex align-items-center justify-content-center ">
+        <div class="m-5">
+            <span class="p-float-label">
+                <input id="float-input" type="text" [ngClass]="{'ng-invalid ng-dirty': valid('nombre')}"
+                    formControlName="nombre" pInputText>
+                <label for="float-input">Nombre</label>
+            </span>
+        </div>
+        <div class="m-5">
+            <span class="p-float-label">
+                <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('apellido')}" type="text"
+                    formControlName="apellido" pInputText>
+                <label for="float-input">Apellido</label>
+            </span>
+        </div>
+    </div>
+    <div class="flex align-items-center justify-content-center ">
+        <div class="m-5">
+            <span class="p-float-label">
+                <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('cedula')}" type="text"
+                    formControlName="cedula" pInputText>
+                <label for="float-input">Cedula</label>
+            </span>
+        </div>
+        <div class="m-5">
+            <span class="p-float-label">
+                <!-- <div *ngIf="valid('expedicion')" style="color: red;">*Requerido</div> -->
+                <p-calendar formControlName="fechaExpedicion" dateFormat="yy-mm-dd"></p-calendar>
+                <label for="float-input">Expedicion</label>
+            </span>
+        </div>
+    </div>
+    <div class="flex justify-content-center ">
+        <div class="m-5">
+            <span class="p-float-label">
+                <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('telefono')}" type="text"
+                    formControlName="telefoo" pInputText>
+                <label for="float-input">Telefono</label>
+            </span>
+        </div>
+        <div class="m-5">
+            <span class="p-float-label">
+                <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('correo')}" type="text"
+                    formControlName="correo" pInputText>
+                <label for="float-input">Correo</label>
+            </span>
+        </div>
+
+    </div>
+
+    <div class="flex  justify-content-center ">
+
+        <div class="m-5">
+            <span class="p-float-label">
+                <p-password formControlName="contrasenia"></p-password>
+                <label for="float-input">Contraseña</label>
+            </span>
+        </div>
+
+        <div class="m-5">
+            <span class="p-float-label">
+                <input id="float-input" [ngClass]="{'ng-invalid ng-dirty': valid('ciudad')}" type="text"
+                    formControlName="ciudad" pInputText>
+                <label for="float-input">Ciudad</label>
+            </span>
+        </div>
+
+
+    </div>
+    <div class="flex align-items-center justify-content-center ">
+        <div class="m-5">
+            <button pButton type="button" (click)="enviar()" class="p-button-raised p-button-rounded">enviar</button>
+        </div>
+        <div class="m-5">
+            <button pButton type="button" (click)="redirec()" class="p-button-raised p-button-rounded">login</button>
+        </div>
+    </div>
+</div>
